@@ -32,7 +32,7 @@ export default {
 }
 
 .pink {
-  background-color: rgb(255, 38, 255);
+  background-color: rgb(251, 99, 251);
 }
 
 .orange {
