@@ -174,7 +174,7 @@
 
     <div class="color-picker">
       <button @click="setLogoColor('#ff7825', '#ffa46d', '#ff8b46')" class="color-ball orange"></button>
-      <button @click="setLogoColor('blue')" class="color-ball blue"></button>
+      <button @click="setLogoColor('#04dab3', '#4BDAB3', '#4BDAB3')" class="color-ball blue"></button>
       <button @click="setLogoColor('pink')" class="color-ball pink"></button>
       <button @click="setLogoColor('green')" class="color-ball green"></button>
     </div>
@@ -202,11 +202,12 @@ export default {
 
 <style>
 .picker-container {
-  @apply h-full w-1/5 flex flex-col items-center
+  @apply w-56 flex flex-col items-center
 }
 
-button:focus {
+.color-ball:focus {
   outline: none;
+  @apply border border-2;
 }
 
 path {
@@ -216,7 +217,7 @@ path {
 .color-ball {
   width: 35px;
   height: 35px;
-  @apply rounded-full border border-2;
+  @apply rounded-full;
 }
 
 .color-picker {
@@ -224,20 +225,18 @@ path {
 }
 
 .pink {
-  background-color: rgb(251, 99, 251);
+  background-color: rgb(253, 57, 253);
 }
 
 .orange {
-  outline: none;
-
-  background-color: rgb(255, 115, 0);
+  background-color: #ff7825;
 }
 
 .blue {
-  background-color: rgb(41, 194, 255);
+  background-color: #04dab3;
 }
 
 .green {
-  background-color: rgb(0, 161, 0)
+  background-color: rgb(3, 148, 3)
 }
 </style>

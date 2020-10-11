@@ -1,16 +1,22 @@
 <template>
   <div id="app" class="h-full">
     <Picker/>
+    <Nav/>
+    <Title/>
   </div>
 </template>
 
 <script>
 import Picker from './components/Picker.vue'
+import Nav from './components/Nav.vue'
+import Title from './components/Title.vue'
 
 export default {
   name: 'App',
   components: {
-    Picker
+    Picker,
+    Nav,
+    Title,
   }
 }
 </script>
@@ -30,6 +36,6 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(47, 47, 47);
-  @apply flex items-center justify-center w-full;
+  @apply flex flex-col items-center justify-start w-full;
 }
 </style>
