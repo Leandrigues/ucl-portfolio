@@ -174,9 +174,9 @@
 
     <div class="color-picker">
       <button @click="setLogoColor('#ff7825', '#ffa46d', '#ff8b46')" class="color-ball orange"></button>
-      <button @click="setLogoColor('#04dab3', '#4BDAB3', '#4BDAB3')" class="color-ball blue"></button>
-      <button @click="setLogoColor('pink')" class="color-ball pink"></button>
-      <button @click="setLogoColor('green')" class="color-ball green"></button>
+      <button @click="setLogoColor('#5ec8ae', '#99daca', '#75d0ba')" class="color-ball blue"></button>
+      <button @click="setLogoColor('#e23caa', '#ea7bc5', '#e559B8')" class="color-ball pink"></button>
+      <button @click="setLogoColor('green', '#5bbd5b', 'green')" class="color-ball green"></button>
     </div>
   </div>
 </template>
@@ -195,6 +195,7 @@ export default {
       this.logoMainColor = main
       this.logoSecondColor = second
       this.logoThirdColor = third
+      this.$emit('colorPicked')
     }
   }
 }

@@ -23,7 +23,7 @@ export default {
 }
 
 .nav-container {
-  @apply flex justify-around w-1/5 mt-12;
+  @apply flex justify-around w-1/5 mt-16;
 }
 
 .tab {
