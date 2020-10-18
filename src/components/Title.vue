@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <!-- Portfólio UCL -->
+  <div class="title">
+    UCL Portfólio
   </div>
 </template>
 
@@ -12,4 +12,13 @@ export default {
 
 <style>
 
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@300&family=Poiret+One&family=Rajdhani:wght@300&family=Raleway:wght@200&display=swap');
+
+.title {
+  /* font-family: 'Rajdhani', sans-serif; */
+  /* font-family: 'Poiret One', cursive; */
+  /* font-family: 'Josefin Slab', serif; */
+  font-family: 'Raleway', sans-serif;
+  @apply text-6xl text-white mt-12;
+}
 </style>

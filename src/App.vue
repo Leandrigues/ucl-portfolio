@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="h-full">
     <Picker/>
-    <Nav/>
+    <Nav v-if="false"/>
     <Title/>
   </div>
 </template>
