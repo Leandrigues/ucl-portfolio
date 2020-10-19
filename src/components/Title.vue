@@ -1,6 +1,6 @@
 <template>
   <div class="title">
-    UCL Portfólio
+    Portfólio CodeLab
   </div>
 </template>
 
@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@300&family=Poiret+One&family=Rajdhani:wght@300&family=Raleway:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@300&family=Poiret+One&family=Rajdhani:wght@300&family=Raleway:wght@450&display=swap');
 
 .title {
   /* font-family: 'Rajdhani', sans-serif; */
