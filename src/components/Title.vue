@@ -1,6 +1,6 @@
 <template>
   <div class="title">
-    Portfólio CodeLab testeeee
+    Portfólio CodeLab
   </div>
 </template>
 
