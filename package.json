@@ -19,7 +19,12 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
-    "vue-template-compiler": "^2.6.11"
+    "git-scripts": "^0.4.3",
+    "surge": "^0.21.6",
+    "vue-template-compiler": "^2.6.11",
+    "scripts": {
+      "pre-push": "npm run build && surge --project ./dist --domain uspcodelab.surge.sh"
+    }
   },
   "eslintConfig": {
     "root": true,
