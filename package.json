@@ -21,7 +21,9 @@
     "eslint-plugin-vue": "^6.2.2",
     "git-scripts": "^0.4.3",
     "surge": "^0.21.6",
-    "vue-template-compiler": "^2.6.11",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "git": {
     "scripts": {
       "pre-push": "npm run build && surge --project ./dist --domain uspcodelab.surge.sh"
     }
