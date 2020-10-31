@@ -1,54 +1,10 @@
 <template>
   <div class="picker-container">
   <svg
-    xmlns:dc="http://purl.org/dc/elements/1.1/"
-    xmlns:cc="http://creativecommons.org/ns#"
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:svg="http://www.w3.org/2000/svg"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
     width="100mm"
     height="100mm"
     viewBox="0 0 20 20"
-    version="1.1"
-    id="svg1125"
-    inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
-    sodipodi:docname="UCL-Logo_Dark.svg">
-    <defs
-      id="defs1119" />
-    <sodipodi:namedview
-      id="base"
-      pagecolor="#ffffff"
-      bordercolor="#666666"
-      borderopacity="1.0"
-      inkscape:pageopacity="0.0"
-      inkscape:pageshadow="2"
-      inkscape:zoom="10.079053"
-      inkscape:cx="41.170629"
-      inkscape:cy="37.272414"
-      inkscape:document-units="mm"
-      inkscape:current-layer="layer1"
-      showgrid="false"
-      inkscape:window-width="1920"
-      inkscape:window-height="996"
-      inkscape:window-x="0"
-      inkscape:window-y="27"
-      inkscape:window-maximized="1"
-      showguides="true"
-      inkscape:guide-bbox="true" />
-    <metadata
-      id="metadata1122">
-      <rdf:RDF>
-        <cc:Work
-          rdf:about="">
-          <dc:format>image/svg+xml</dc:format>
-          <dc:type
-            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-          <dc:title></dc:title>
-        </cc:Work>
-      </rdf:RDF>
-    </metadata>
+    >
     <g
       inkscape:label="Camada 1"
       inkscape:groupmode="layer"

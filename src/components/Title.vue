@@ -1,6 +1,6 @@
 <template>
   <div class="title">
-    Portfólio CodeLab
+    USPCodeLab
   </div>
 </template>
 

@@ -1,14 +1,16 @@
 <template>
   <div class="nav-container">
-    <button class="tab">Timeline</button>
-    <button class="tab">Hoje</button>
-    <button class="tab">Contato</button>
+    <button v-for="(tab, i) in tabs" :key="i" class="tab">{{ tab }}</button>
   </div>
 </template>
 
 <script>
 export default {
-
+  data() {
+    return {
+      tabs: ["Desenvolvimento", "Pesquisa", "Aulas", "Eventos", "Contatos"]
+    }
+  }
 }
 </script>
 
@@ -23,11 +25,18 @@ export default {
 }
 
 .nav-container {
-  @apply flex justify-around w-1/5 mt-16;
+  @apply flex flex-wrap justify-around w-full mt-16 justify-around;
 }
 
 .tab {
-  @apply text-white text-lg;
+  @apply text-white text-base px-4 mb-4;
   font-family: 'Commissioner', sans-serif;
 }
+
+@screen md {
+  .nav-container {
+    @apply w-1/3
+  }
+}
+
 </style>

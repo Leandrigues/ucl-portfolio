@@ -7,6 +7,7 @@
     <transition name="fade">
       <Title v-show="showTitle"/>
     </transition>
+    <Post />
   </div>
 </template>
 
@@ -14,6 +15,7 @@
 import Picker from './components/Picker.vue'
 import Nav from './components/Nav.vue'
 import Title from './components/Title.vue'
+import Post from './components/Post.vue'
 
 export default {
   name: 'App',
@@ -27,6 +29,7 @@ export default {
     Picker,
     Nav,
     Title,
+    Post
   },
   methods: {
     sleep: (time) => new Promise((resolve) => setTimeout(resolve, time)),
@@ -43,24 +46,21 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
+  -webkit-user-select: none;
 }
 
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(47, 47, 47);
-  @apply flex flex-col items-center justify-start w-full;
+  @apply flex flex-col items-center justify-start h-full w-full;
 }
 
-  .fade-enter-active, .fade-leave-active  {
-    transition: opacity .9s;
-  }
+.fade-enter-active, .fade-leave-active  {
+  transition: opacity .9s;
+}
 
-  .fade-enter, .fade-leave-to {
-    opacity: 0;
-  }
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
 </style>
