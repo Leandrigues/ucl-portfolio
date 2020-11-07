@@ -1,7 +1,7 @@
 <template>
   <svg
-    width="100mm"
-    height="100mm"
+    width="100%"
+    height="100%"
     viewBox="0 0 20 20"
     >
     <g
@@ -12,8 +12,8 @@
       <rect
         style="fill:rgb(47,47,47);fill-opacity:1;stroke:none;stroke-width:0.26499999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
         id="rect6211"
-        width="20"
-        height="20"
+        width="100%"
+        height="100%"
         x="0"
         y="276.99997"
         inkscape:export-filename="/home/vitor/Final.png"

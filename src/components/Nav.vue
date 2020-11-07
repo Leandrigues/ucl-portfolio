@@ -17,7 +17,6 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@600&display=swap');
 
-
 .tab:focus {
   outline: none;
   border: none;
@@ -35,7 +34,8 @@ export default {
 
 @screen md {
   .nav-container {
-    @apply w-1/3
+    @apply w-1/3;
+    width: 30%;
   }
 }
 

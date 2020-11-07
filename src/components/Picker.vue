@@ -37,7 +37,7 @@ export default {
 
 <style>
 .picker-container {
-  @apply w-56 flex flex-col items-center
+  @apply w-64 flex flex-col items-center;
 }
 
 .color-ball:focus {

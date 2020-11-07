@@ -6,7 +6,18 @@
 
 <script>
 export default {
-
+  data() {
+      return {
+        posts: [
+          {
+            title: "dev.boost",
+            description:
+              "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore minima voluptate suscipit fuga laboriosam laudantium, ad commodi dicta soluta recusandae labore ipsam architecto, repellat sapiente voluptatum sunt aliquam quod nemo dolor atque, ea dolorum illum! Iusto, temporibus earum. Dolorum, similique hic nisi reiciendis distinctio, perferendis provident odio veritatis quas, reprehenderit temporibus adipisci. Eligendi illo iste voluptatibus totam facere autem dolorem rem, officiis ea? Quae esse nesciunt id laudantium, natus dignissimos rem eius. Earum voluptates sint pariatur perferendis esse illo. Reiciendis optio molestias maiores obcaecati eius laborum eaque magnam perferendis reprehenderit consequatur provident veritatis, facilis necessitatibus fuga ducimus vitae corporis ea!",
+            image: 'image'
+          },
+        ],
+      };
+    },
 }
 </script>
 
@@ -19,6 +30,12 @@ export default {
   /* font-family: 'Josefin Slab', serif; */
   font-family: 'Raleway', sans-serif;
   transition: 1s display;
-  @apply text-6xl text-white mt-10;
+  @apply text-xl text-white mt-10;
+}
+
+@screen md {
+  .title {
+    @apply text-5xl
+  }
 }
 </style>
