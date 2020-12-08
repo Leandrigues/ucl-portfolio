@@ -60,18 +60,18 @@ path {
 }
 
 .pink {
-  background-color: rgb(253, 57, 253);
+  background-color:  #e559B8;
 }
 
 .orange {
-  background-color: #ff7825;
+  background-color: #ff8b46;
 }
 
 .blue {
-  background-color: #04dab3;
+  background-color: #75d0ba;
 }
 
 .green {
-  background-color: rgb(3, 148, 3)
+  background-color: #5bbd5b;
 }
 </style>

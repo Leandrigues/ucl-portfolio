@@ -35,8 +35,6 @@ export default {
 @screen md {
   .nav-container {
     @apply w-1/3;
-    width: 30%;
   }
 }
-
 </style>

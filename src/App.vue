@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="h-full">
+  <div id="app">
     <Picker v-on:colorPicked="changeContent" />
     <transition name="fade">
       <Nav v-show="showNav" />
@@ -7,8 +7,8 @@
     <transition name="fade">
       <Title v-show="showTitle" />
     </transition>
-    <transition v-for="(post, i) in posts" :key="i" name="fade">
-      <Post :post="post"  v-show="showNav" />
+    <transition v-for="(post, i) in filteredByCampusAndCategory(selectedCampus, selectedCategory)" :key="i" name="fade">
+      <Post v-if="posts.length > 0" :post="post"  v-show="showNav" />
     </transition>
   </div>
 </template>
@@ -18,6 +18,7 @@ import Picker from "./components/Picker.vue";
 import Nav from "./components/Nav.vue";
 import Title from "./components/Title.vue";
 import Post from "./components/Post.vue";
+import axios from 'axios'
 
 export default {
   name: "App",
@@ -25,20 +26,9 @@ export default {
     return {
       showTitle: true,
       showNav: false,
-      posts: [
-        {
-          title: "dev.boost",
-          description:
-            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore minima voluptate suscipit fuga laboriosam laudantium, ad commodi dicta soluta recusandae labore ipsam architecto, repellat sapiente voluptatum sunt aliquam quod nemo dolor atque, ea dolorum illum! Iusto, temporibus earum. Dolorum, similique hic nisi reiciendis distinctio, perferendis provident odio veritatis quas, reprehenderit temporibus adipisci.",
-          image: 'image'
-        },
-        {
-          title: "dev.boost",
-          description:
-            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore minima voluptate suscipit fuga laboriosam laudantium, ad commodi dicta soluta recusandae labore ipsam architecto, repellat sapiente voluptatum sunt aliquam quod nemo dolor atque, ea dolorum illum! Iusto, temporibus earum. Dolorum, similique hic nisi reiciendis distinctio, perferendis provident odio veritatis quas, reprehenderit temporibus adipisci.",
-          image: 'image'
-        },
-      ],
+      selectedCampus: "butanta",
+      selectedCategory: "dev",
+      posts: [],
     };
   },
   components: {
@@ -49,11 +39,24 @@ export default {
   },
   methods: {
     sleep: (time) => new Promise((resolve) => setTimeout(resolve, time)),
+
     changeContent: function() {
       this.showTitle = false;
       this.sleep(900).then(() => (this.showNav = true));
     },
+
+    filteredByCampusAndCategory(campus, category) {
+      const filtered = this.posts.filter((post) => {
+        return post.campus === campus && post.category === category
+      })
+      return filtered
+    }
   },
+  async created() {
+    const response = await axios.get("https://5fccd95f603c0c0016487283.mockapi.io/posts")
+    this.posts = response.data
+  }
+
 };
 </script>
 
@@ -64,19 +67,26 @@ export default {
   box-sizing: border-box;
 }
 
-.post-container:nth-of-type(2n) {
-  flex-direction: row-reverse;
+@screen md {
+
+  .post-container:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
+
+  .post-container:nth-of-type(even) > .image {
+    @apply ml-10 mr-0;
+  }
+
+  .post-container:nth-of-type(odd) > .text > .post-title {
+    @apply text-right;
+  }
 }
 
-.post-container:nth-of-type(2n) > .image {
-  @apply ml-10 mr-0;
-}
 #app {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-    @apply min-h-screen;
   background-color: rgb(47, 47, 47);
-  @apply flex flex-col items-center justify-start  w-full;
+  @apply flex flex-col items-center justify-start min-h-screen w-full;
+  /* min-height: calc(100%);  */
+  min-height: calc(100vh + 1rem);
 }
 
 .fade-enter-active,

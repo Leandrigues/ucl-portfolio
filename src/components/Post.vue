@@ -1,7 +1,7 @@
 <template>
   <div class="post-container">
-    <img class="image" src="https://miro.medium.com/max/10368/1*eyhPjT5BII1juyvr715XIQ.jpeg" alt="">
-    <div>
+    <img class="image" :src="post.image" alt="">
+    <div class="text">
       <div class="post-title">{{ post.title }}</div>
       <div class="post-description">{{ post.description }}</div>
     </div>
@@ -20,8 +20,8 @@ export default {
 
 <style scoped>
   .post-container {
-    @apply flex flex-col items-center text-white;
-    width: 80%;
+    @apply flex flex-col items-center text-white mb-10 mt-10;
+    width: 90%;
   }
 
   .post-title {
@@ -40,8 +40,11 @@ export default {
     }
 
     .image {
-      width: 400px;
-      @apply mr-10 mt-3;
+      @apply mr-10 mt-3 w-1/2;
+    }
+
+    .text {
+      @apply w-1/2;
     }
 
     .post-title {
