@@ -1,13 +1,13 @@
 <template>
   <div id="app">
-    <Picker v-on:colorPicked="changeContent" />
+    <Picker v-on:color-picked="changeContent"/>
     <transition name="fade">
-      <Nav v-show="showNav" />
+      <Nav v-show="showNav" v-on:tab-picked="filterByCategory" />
     </transition>
     <transition name="fade">
       <Title v-show="showTitle" />
     </transition>
-    <transition v-for="(post, i) in filteredByCampusAndCategory(selectedCampus, selectedCategory)" :key="i" name="fade">
+    <transition v-for="(post, i) in filteredPosts" :key="i" name="fade">
       <Post v-if="posts.length > 0" :post="post"  v-show="showNav" />
     </transition>
   </div>
@@ -27,8 +27,9 @@ export default {
       showTitle: true,
       showNav: false,
       selectedCampus: "butanta",
-      selectedCategory: "dev",
+      selectedCategory: "Desenvolvimento",
       posts: [],
+      filteredPosts: []
     };
   },
   components: {
@@ -40,9 +41,11 @@ export default {
   methods: {
     sleep: (time) => new Promise((resolve) => setTimeout(resolve, time)),
 
-    changeContent: function() {
+    changeContent(campus) {
       this.showTitle = false;
       this.sleep(900).then(() => (this.showNav = true));
+      this.filteredPosts = this.filteredByCampusAndCategory(campus, "Desenvolvimento")
+
     },
 
     filteredByCampusAndCategory(campus, category) {
@@ -50,11 +53,20 @@ export default {
         return post.campus === campus && post.category === category
       })
       return filtered
+    },
+
+    filterByCategory(category) {
+      console.log(category)
+      const filtered = this.posts.filter((post) => {
+        return post.category === category
+      })
+      this.filteredPosts = filtered
     }
   },
   async created() {
     const response = await axios.get("https://5fccd95f603c0c0016487283.mockapi.io/posts")
     this.posts = response.data
+    this.filteredPosts = this.filteredByCampusAndCategory("butanta", "Desenvolvimento")
   }
 
 };

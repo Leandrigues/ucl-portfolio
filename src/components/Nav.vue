@@ -1,6 +1,6 @@
 <template>
   <div class="nav-container">
-    <button v-for="(tab, i) in tabs" :key="i" class="tab">{{ tab }}</button>
+    <button v-for="(tab, i) in tabs" :key="i" class="tab" @click="$emit('tab-picked', tab)">{{ tab }}</button>
   </div>
 </template>
 

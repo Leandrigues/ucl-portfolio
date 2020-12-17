@@ -29,7 +29,22 @@ export default {
       this.logoMainColor = main
       this.logoSecondaryColor = secondary
       this.logoTertiaryColor = tertiary
-      this.$emit('colorPicked')
+      let campus = "butanta"
+      switch(main) {
+        case "#ff7825":
+          campus = "butanta"
+          break
+        case "#5ec8ae":
+          campus = "sanca"
+          break;
+        case "#e23caa":
+          campus = "each"
+          break;
+        case "green":
+          campus = "ufabc"
+          break;
+      }
+      this.$emit('color-picked', campus)
     }
   }
 }
