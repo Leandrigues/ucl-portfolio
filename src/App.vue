@@ -1,13 +1,13 @@
 <template>
   <div id="app">
-    <Picker v-on:color-picked="changeContent"/>
+    <Picker v-on:color-picked="filterByCampus"/>
     <transition name="fade">
       <Nav v-show="showNav" v-on:tab-picked="filterByCategory" />
     </transition>
     <transition name="fade">
       <Title v-show="showTitle" />
     </transition>
-    <transition v-for="(post, i) in filteredPosts" :key="i" name="fade">
+    <transition v-for="(post, i) in postsFilteredByCampusAndCategory" :key="i" name="fade">
       <Post v-if="posts.length > 0" :post="post"  v-show="showNav" />
     </transition>
   </div>
@@ -24,12 +24,13 @@ export default {
   name: "App",
   data() {
     return {
+      // Exibition control
       showTitle: true,
       showNav: false,
-      selectedCampus: "butanta",
-      selectedCategory: "Desenvolvimento",
+      // All fetched posts
       posts: [],
-      filteredPosts: []
+      postsFilteredByCampus: [],
+      postsFilteredByCampusAndCategory: []
     };
   },
   components: {
@@ -40,35 +41,23 @@ export default {
   },
   methods: {
     sleep: (time) => new Promise((resolve) => setTimeout(resolve, time)),
-
-    changeContent(campus) {
+    filterByCampus(campus) {
       this.showTitle = false;
       this.sleep(900).then(() => (this.showNav = true));
-      this.filteredPosts = this.filteredByCampusAndCategory(campus, "Desenvolvimento")
 
+      // Filter posts by campus and by category === "Desenvolvimento" before selecting a tab
+      this.postsFilteredByCampus = this.posts.filter((post) => post.campus === campus);
+      this.postsFilteredByCampusAndCategory = this.postsFilteredByCampus.filter((post) => post.category === "Desenvolvimento");
     },
-
-    filteredByCampusAndCategory(campus, category) {
-      const filtered = this.posts.filter((post) => {
-        return post.campus === campus && post.category === category
-      })
-      return filtered
-    },
-
     filterByCategory(category) {
-      console.log(category)
-      const filtered = this.posts.filter((post) => {
-        return post.category === category
-      })
-      this.filteredPosts = filtered
+      this.postsFilteredByCampusAndCategory = this.postsFilteredByCampus.filter((post) => post.category === category);
     }
   },
   async created() {
-    const response = await axios.get("https://5fccd95f603c0c0016487283.mockapi.io/posts")
-    this.posts = response.data
-    this.filteredPosts = this.filteredByCampusAndCategory("butanta", "Desenvolvimento")
+    // Fetch all posts from mockapi
+    const response = await axios.get("https://5fccd95f603c0c0016487283.mockapi.io/posts");
+    this.posts = response.data;
   }
-
 };
 </script>
 
@@ -97,7 +86,6 @@ export default {
 #app {
   background-color: rgb(47, 47, 47);
   @apply flex flex-col items-center justify-start min-h-screen w-full;
-  /* min-height: calc(100%);  */
   min-height: calc(100vh + 1rem);
 }
 

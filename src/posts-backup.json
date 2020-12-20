@@ -1,0 +1,37 @@
+[
+  {
+    "title": "USPReq",
+    "campus": "butanta",
+    "category": "Desenvolvimento",
+    "description": "O dev.boost é nosso grupo de desenvolvimento de software. No segundo semestre de 2019, desenvolvemos o USPReq, uma plataforma de visualização de matérias do IME em forma de grafo. Atualmente a plataforma se encontra em http://uspreq.surge.sh/.",
+    "image": "https://i.imgur.com/Ood9r3G.png"
+  },
+  {
+    "title": "Solus",
+    "campus": "butanta",
+    "category": "Desenvolvimento",
+    "description": "O Portal Solus é um diretório de organizações e programas atuantes no campo de inovação e empreendedorismo nos diversos campi USP. O portal indexa informações em seis eixos: Iniciativas, Competências, Pesquisa, Desenvolvimento e Inovação, Educação e Empresas. Atualmente o Portal Solus pode ser encontrado em https://solus.netlify.app/.",
+    "image": "https://i.ibb.co/w72RvYK/image.png"
+  },
+  {
+    "title": "InterHack",
+    "campus": "butanta",
+    "category": "Eventos",
+    "description": "O InterHack é um hackathon inter-campi organizado em conjunto pelos núcleos do Butantã, ICMC e EACH, contando com uma etapa de seletiva e uma final, que ocorreu no Centro de Difusão Internacional da USP (CDI-USP). O evento reuniu mais de 100 alunos dos três campi para desenvolver soluções em temas de Governança Eletrônica (e-Governance) na primeira etapa, e Edutecnologia (EduTech) na grande final.",
+    "image": "https://i.imgur.com/Qgrxjq2.png"
+  },
+  {
+    "title": "dev.learn",
+    "campus": "butanta",
+    "category": "Aulas",
+    "description": "O Portal Solus é um diretório de organizações e programas atuantes no campo de inovação e empreendedorismo nos diversos campi USP. O portal indexa informações em seis eixos: Iniciativas, Competências, Pesquisa, Desenvolvimento e Inovação, Educação e Empresas. Atualmente o Portal Solus pode ser encontrado em https://solus.netlify.app/.",
+    "image": "https://i.ibb.co/w72RvYK/image.png"
+  },
+  {
+    "title": "dev.learn",
+    "campus": "sanca",
+    "category": "Aulas",
+    "description": "O Portal Solus é um diretório de organizações e programas atuantes no campo de inovação e empreendedorismo nos diversos campi USP. O portal indexa informações em seis eixos: Iniciativas, Competências, Pesquisa, Desenvolvimento e Inovação, Educação e Empresas. Atualmente o Portal Solus pode ser encontrado em https://solus.netlify.app/.",
+    "image": "https://i.ibb.co/w72RvYK/image.png"
+  }
+]
