@@ -46,7 +46,7 @@ export default {
       this.sleep(900).then(() => (this.showNav = true));
 
       // Filter posts by campus and by category === "Desenvolvimento" before selecting a tab
-      this.postsFilteredByCampus = this.posts.filter((post) => post.campus === campus);
+      this.postsFilteredByCampus = this.posts.filter((post) => post.campus === campus || post.campus === "cli");
       this.postsFilteredByCampusAndCategory = this.postsFilteredByCampus.filter((post) => post.category === "Desenvolvimento");
     },
     filterByCategory(category) {
@@ -55,8 +55,12 @@ export default {
   },
   async created() {
     // Fetch all posts from mockapi
-    const response = await axios.get("https://5fccd95f603c0c0016487283.mockapi.io/posts");
-    this.posts = response.data;
+    try {
+      const response = await axios.get("https://5fccd95f603c0c0016487283.mockapi.io/posts");
+      this.posts = response.data;
+    } catch(e) {
+      alert("Não foi possível buscar posts, nosso backend deve estar em manutenção :(")
+    }
   }
 };
 </script>
@@ -97,5 +101,9 @@ export default {
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
+}
+
+a {
+  text-decoration: underline ;
 }
 </style>

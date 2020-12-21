@@ -3,7 +3,7 @@
     <img class="image" :src="post.image" alt="">
     <div class="text">
       <div class="post-title">{{ post.title }}</div>
-      <div class="post-description">{{ post.description }}</div>
+      <div class="post-description" v-html="post.description"></div>
     </div>
   </div>
 </template>
@@ -51,5 +51,6 @@ export default {
       @apply text-left mt-0;
       vertical-align: top;
     }
+
   }
 </style>

@@ -18,20 +18,34 @@
     "campus": "butanta",
     "category": "Eventos",
     "description": "O InterHack é um hackathon inter-campi organizado em conjunto pelos núcleos do Butantã, ICMC e EACH, contando com uma etapa de seletiva e uma final, que ocorreu no Centro de Difusão Internacional da USP (CDI-USP). O evento reuniu mais de 100 alunos dos três campi para desenvolver soluções em temas de Governança Eletrônica (e-Governance) na primeira etapa, e Edutecnologia (EduTech) na grande final.",
-    "image": "https://i.imgur.com/Qgrxjq2.png"
+    "image": "https://scontent.fcgh23-1.fna.fbcdn.net/v/t1.0-9/75614214_2597024137002282_2644207855711813632_o.jpg?_nc_cat=102&ccb=2&_nc_sid=a26aad&_nc_eui2=AeFEcKhlYnL4ydnoSffrz0Ue7HEcaoH0GlTscRxqgfQaVChFxNLwx9sMnyoy6iQPrh9SScaddS9R67a-ZKv3KH6h&_nc_ohc=3-sqSaeibeMAX8hn-fO&_nc_ht=scontent.fcgh23-1.fna&oh=79501edbde673df954c31a499c6911c8&oe=60042B88"
   },
   {
     "title": "dev.learn",
     "campus": "butanta",
     "category": "Aulas",
-    "description": "O Portal Solus é um diretório de organizações e programas atuantes no campo de inovação e empreendedorismo nos diversos campi USP. O portal indexa informações em seis eixos: Iniciativas, Competências, Pesquisa, Desenvolvimento e Inovação, Educação e Empresas. Atualmente o Portal Solus pode ser encontrado em https://solus.netlify.app/.",
-    "image": "https://i.ibb.co/w72RvYK/image.png"
+    "description": "O dev.learn é nossa iniciativa de introduzir aos calouros os fundamentos do desenvolvimento web. O curso tem a duração de um semestre, e tem como objetivo ensinar conceitos como <b>HTML, CSS e JavaScript,</b> contando com aulas teóricas e práticas.",
+    "image": "https://scontent.fcgh23-1.fna.fbcdn.net/v/t1.0-9/53061912_2142072332497467_9130137084361703424_n.jpg?_nc_cat=111&ccb=2&_nc_sid=730e14&_nc_eui2=AeE7wawWvvTYm1S_taFgv_4M1Zj6t3TSkKzVmPq3dNKQrPWAxDFfRaJYy05WldA6uXse9SqcKLzovT11-wt3jSrd&_nc_ohc=T184u5BEUxQAX-mrztc&_nc_ht=scontent.fcgh23-1.fna&oh=5bc1306d54fd92b25bf48e148de719a0&oe=60061610"
   },
   {
     "title": "dev.learn",
     "campus": "sanca",
     "category": "Aulas",
-    "description": "O Portal Solus é um diretório de organizações e programas atuantes no campo de inovação e empreendedorismo nos diversos campi USP. O portal indexa informações em seis eixos: Iniciativas, Competências, Pesquisa, Desenvolvimento e Inovação, Educação e Empresas. Atualmente o Portal Solus pode ser encontrado em https://solus.netlify.app/.",
-    "image": "https://i.ibb.co/w72RvYK/image.png"
+    "description": "O dev.learn é nossa iniciativa de introduzir aos calouros os fundamentos do desenvolvimento web. O curso tem a duração de um semestre, e tem como objetivo ensinar conceitos como <b>HTML, CSS e JavaScript,</b> contando com aulas teóricas e práticas.",
+    "image": "https://scontent.fcgh23-1.fna.fbcdn.net/v/t1.0-9/53061912_2142072332497467_9130137084361703424_n.jpg?_nc_cat=111&ccb=2&_nc_sid=730e14&_nc_eui2=AeE7wawWvvTYm1S_taFgv_4M1Zj6t3TSkKzVmPq3dNKQrPWAxDFfRaJYy05WldA6uXse9SqcKLzovT11-wt3jSrd&_nc_ohc=T184u5BEUxQAX-mrztc&_nc_ht=scontent.fcgh23-1.fna&oh=5bc1306d54fd92b25bf48e148de719a0&oe=60061610"
+  },
+  {
+    "title": "Redes Sociais",
+    "campus": "butanta",
+    "category": "Contatos",
+    "description": "<strong>Facebook</strong>: <a href='https://www.facebook.com/uspcodelab/'>https://www.facebook.com/uspcodelab/</a><br><strong>Instagram</strong>: <a href= 'https://www.instagram.com/uspcodelab/'>https://www.instagram.com/uspcodelab/</a><br><strong>YouTube</strong>: <a href='https://www.youtube.com/c/CodeLabBR/videos'>https://www.youtube.com/c/CodeLabBR/videos</a>",
+    "image": "https://www.agenciabowie.com.br/wp-content/uploads/2018/02/facebook-instagram-youtube-twitter-giveaways-contests-rules.png"
+  },
+  {
+    "title": "HackFools no Facebook",
+    "campus": "cli",
+    "category": "Eventos",
+    "description": "Em 2019, realizamos nosso hack day, o HackFools, no escritório do Facebook em São Paulo. O evento teve como tema \"Ideias convincentes que não dão em lugar nenhum\", e teve como objetivo atrair os calouros da universidade para conhecer os Hackathons e o USPCodeLab",
+    "image": "https://scontent.fcgh23-1.fna.fbcdn.net/v/t1.0-9/57503273_2213545125350187_4208727711360745472_o.jpg?_nc_cat=105&ccb=2&_nc_sid=0debeb&_nc_eui2=AeGvAjmu9SxtYAjDvv9PP2D6VHdlClCFBCZUd2UKUIUEJpv8Z-EzLviSWWFnPrINJQVX-tFVUBdzerGBLcdvTzRx&_nc_ohc=NM_RDXDSaZEAX_FyUfr&_nc_ht=scontent.fcgh23-1.fna&oh=121ed351028291e6afaa3104db219921&oe=60070219"
   }
 ]
